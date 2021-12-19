@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.starting{
+    width: 100%;
+    height: 95vh;
+    position: relative;
+}
+
+.starting-img{
+    width: 85%;
+    height: 78vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url('img/food.jpg') center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+}
+
+
+.cusine{
+    width: 700px;
+    height: 110px;
+    position: absolute;
+    top: 30%;
+    left: 21%;
+
+}
+.cusine-tag{
+    font-size: 7rem;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#E9DBBD;
+    letter-spacing: 1.6px;
+    margin-bottom: 10px;
+}
+.cusine-sub-tag{
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#ffffff;
+    letter-spacing: 1.3px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* TABLE SECTION */
+.table{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.table-img{
+    width: 825px;
+    position: relative;
+}
+
+.dishes{
+    width: 360px;
+    height: 740px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.dish{
+    width: 210px;
+    height: 110px;
+    position: absolute;
+    opacity: 0;
+    animation: fade-in 2s infinite alternate;
+}
+.dish1{
+    top: 17%;
+    left: 1%;
+}
+.dish2{
+    top: 43%;
+    left: 1%;
+}
+.dish3{
+    top: 67%;
+    left: 1%;
+}
+.dish4{
+    top: 17%;
+    right: 1%;
+}
+.dish5{
+    top: 43%;
+    right: 1%;
+}
+.dish6{
+    top: 67%;
+    right: 1%;
+}
+
+.food-section{
+    width: 100%;
+    height: auto;
+}
+
+.animate-left1{
+    animation: fade-in-left 7s 3s infinite  ;
+}
+.animate-left2{
+    animation: fade-in-left 7s 3s infinite  ;
+}
+.animate-left3{
+    animation: fade-in-left 7s  3s infinite  ;
+    
+}
+
+.animate-right1{
+    animation: fade-in-right 7s 3s infinite  ;
+}
+.animate-right2{
+    animation: fade-in-right 7s 3s infinite  ;
+}
+.animate-right3{
+    animation: fade-in-right 7s  3s infinite  ;
+    
+}
+
+
+@media screen and (max-width:751px) {
+    .dish{
+        width: 183px;
+        height: 96px;
+    }
+        
+
+}
+
+
+@media screen and (max-width:640px) {
+    .dish{
+        width: 131px;
+        height: 93px;
+    }
+
+        
+    .dish1{
+        top: 23%;
+        left: 10%;
+    }
+    .dish2{
+        top: 43%;
+        left: 10%;
+    }
+    .dish3{
+        top: 64%;
+        left: 9%;
+    }
+    .dish4{
+        top: 23%;
+        right: 10%;
+    }
+    .dish5{
+        top: 43%;
+        right: 10%;
+    }
+    .dish6{
+        top: 64%;
+        right: 9%;
+    }
+    
+   
+}
+
+@keyframes fade-in-left {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }    
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        
+    }
+}
+@keyframes fade-in-right {
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }    
+    to{
+        opacity: 1;
+        transform: translateX(0);
+        
+    }
+}
+/* More-Category */
+
+.more-category{
+    width: 100%;
+    height: auto;
+}
+
+.black-box{
+    width: 80%;
+    height: 250px;
+    background-color: black;
+    border-radius: 0 10px 10px 0;
+}
+.food-box{
+    margin: 30px  ;
+    border-radius: 10px;
+}
+.more-tagline{
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+    font-size: 3.1em;
+    font-style: italic;
+}
+
+.box1 , .box2, .box3, .box4 ,.box5,.box6{
+    width: 310px;
+    height: 310px;
+    text-align: center;
+}
+
+.box1{
+    background-image: url('img/indian-food.jpeg');
+    background-size: cover;
+}
+.box2{
+    background-image: url('img/pork.png') ;
+    background-size: cover;
+}
+.box3{
+    background-image: url('img/chicken.png');
+    background-size: cover;
+}
+.box4{
+    background-image: url('img/mashroom.png');
+    background-size: cover;
+}
+.box5{
+    background-image: url('img/tikka.png');
+    background-size: cover;
+}
+.box6{
+    background-image: url('img/smoothie.png');
+    background-size: cover;
+}
+
+
+.row100{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.padding-left{
+    margin-left:30px;
+}
+
+.food-button{
+    margin-top: 250px;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    border: none;
+    background-color: #E9DBBD;
+    font-weight: bold;
+}
+
+footer{
+    width: 100%;
+    height: 50vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 640px) {
+            
+    .starting-img{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: url('img/food.jpg') center no-repeat;
+        background-size: cover;
+    }
+    .cusine{
+        width: 307px;
+    }
+    .cusine-tag{
+        font-size: 5.2rem;
+    }
+    .dish{
+        width: 110px;
+        height: 90px;
+    }
+}
+
+@media screen and (max-width:766px) {
+    .starting-img{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: url('img/food.jpg') center no-repeat;
+        background-size: cover;
+    } 
+}
+

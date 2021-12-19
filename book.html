@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="book-nav.css" />
+    <link rel="stylesheet" href="book.css" />
+    <title>Book Room</title>
+    <script
+      src="https://kit.fontawesome.com/c92454c83c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+   <!-- nav section -->
+   <header>
+    <img src="img/logo-.png" alt="Logo" class="logo">
+    <!-- <h1 class="logo">Logo</h1> -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="board.html">Board</a></li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
+
+    <br />
+    <!-- BOOK NOW SECTION -->
+
+    <section class="banner">
+      <h2>Book your Comfort now</h2>
+      <div class="card-container">
+        <div class="card-img">
+          <!-- img here -->
+        </div>
+
+        <div class="card-content">
+          <h3>Reservation</h3>
+
+          <form action="">
+            <div class="form-row">
+              <span>First Name:</span>
+              <input
+                type="text"
+                name="First name: "
+                id=""
+                placeholder="First name"
+              />
+
+              <span>Last Name:</span>
+              <input
+                type="text"
+                name="Last name: "
+                id=""
+                placeholder="Last name"
+              />
+            </div>
+
+            <div class="form-row">
+              <span>Email: </span>
+              <input type="email" name="Email: " id="" placeholder="Email" />
+
+              <span>Phone no:</span>
+              <input
+                type="number"
+                name="Phone number: "
+                id=""
+                placeholder="Phone no."
+              />
+            </div>
+
+            <div class="form-row">
+              <span>Age:</span>
+              <input type="text" name="Age: " id="age" placeholder="Age" />
+
+              <span>Adult:</span>
+              <input type="number" name="" id="adult" placeholder="0"/>
+
+              <span>Child:</span>
+              <input type="number" name="" id="child" placeholder="0" />
+            </div>
+
+            <h3 class="booking">* Booking *</h3>
+            <div class="form-row">
+              <span>Location:</span>
+              <input type="text" name="Age: " id="location" placeholder="Mumbai" />
+
+              <span>Room:</span>
+              <select name="Room" id="room">
+                <option value="Family">Family</option>
+                <option value="Family + Kids">Family + Kids</option>
+                <option value="Luxuary">Luxuary</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <span>Check-in:</span>
+              <input type="number" name="" id="check-in" />
+
+              <span>Check-out:</span>
+              <input type="number" name="" id="check-out" />
+
+              <button class="sub-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

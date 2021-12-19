@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  /* line-height: 1.7; */
+  box-sizing: border-box;
+}
+
+.top {
+  height: 90vh;
+  background-image: url("img/top-hotel.jpg");
+  background-size: cover;
+  background-position: left;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.top::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(0.2rem);
+  transform: scale(1.15);
+}
+
+.heading {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary-main {
+  font-size: 5.5rem;
+  font-weight: 500;
+}
+
+.heading-primary-sub {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.desc {
+  background-color: #efefef;
+  padding-top: 9rem;
+  transform: translateY(-8rem);
+  z-index: -1;
+}
+.text-box {
+  padding: 5%;
+}
+.about-text {
+  font-size: 1.5rem;
+  letter-spacing: 0.12rem;
+}
+
+.section-social {
+  width: 100%;
+  height: auto;
+  background-color: black;
+  margin-top: -140px;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+.social-heading {
+  font-size: 3rem;
+  text-align: center;
+  background-color: black;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.social-image {
+  width: 450px;
+  height: 350px;
+  margin: 59px;
+  margin-bottom: 0;
+}
+.social-container > h3 {
+  color: white;
+  /* padding-left: 20%; */
+  text-align: center;
+  font-size: 1.5rem;
+}
+.heading-secondary {
+  color: #cbb668;
+  padding: 25px;
+  text-align: center;
+}
+
+@media screen and (max-width: 810px) {
+  body {
+    font-size: 60%;
+  }
+  .heading-primary-main {
+    font-size: 3.5rem;
+  }
+  .heading-primary-sub {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  body {
+    font-size: 50%;
+  }
+
+  .heading-primary-main {
+    font-size: 4.5rem;
+  }
+ 
+  .about-text {
+    font-size: 1rem;
+  }
+  .heading-secondary {
+    font-size: 3rem;
+  }
+  .social-image {
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    margin-bottom: 1%;
+    padding: 0;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 10vh;
+}

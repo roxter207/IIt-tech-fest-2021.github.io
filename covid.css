@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.covid1{
+  height: 100vh;
+  background: url('img/hotelroom.png') center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.covid1:after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(.2rem);
+  transform: scale(1.15);
+}
+.content-wrapper{
+    text-align: center;
+    margin-top: 250px;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .title{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    color: rgb(255, 255, 255);
+  }
+  .message{
+    font-size: 2rem;
+    font-style: italic;
+    margin-bottom:3rem ;
+    color: rgb(252, 252, 252);
+  }
+
+
+
+  .safety-carousel{
+      margin-top: 100px;
+  }
+  
+  .caro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .cal {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: 25px;
+  }
+  
+  .cal>p{
+      font-size: 39px;
+      font-weight: bold;
+      padding-top: 130px;
+      color: wheat;
+  }
+
+
+  .caro1,
+  .caro2 {
+    margin: 10px;
+  }
+  .caro1 {
+    margin-bottom: 30px;
+  }
+  .caro2 {
+    margin-bottom: 80px;
+  }
+  
+  .img1 {
+    background: url("img/sanitization.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .img2 {
+    background: url("img/kids-room.png") center no-repeat;
+    background-size: cover;
+  }
+  .img3 {
+    background: url("img/masked-emp.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .img4 {
+    background: url("img/hospital.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .img5 {
+    background: url("img/safe-dinner.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .img6 {
+    background: url("img/safe-pick.jpg") center no-repeat;
+    background-size: cover;
+  }  

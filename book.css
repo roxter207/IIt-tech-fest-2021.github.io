@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('img/hotelroom.png') center no-repeat;
+    background-size: cover;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+}
+.banner:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: blur(.2rem);
+    transform: scale(1.15)
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 620px 620px;
+
+}
+.card-img{
+    background: url('img/hotelroom.png') center/cover no-repeat;
+}
+.card-content{
+    height: 650px;
+    background-color: #ffffff;
+}
+.booking{
+    text-align:  center;
+    margin: 15px 12px;
+    font-size: 33px;
+}
+.card-content > h3{
+    text-align: center;
+    padding: 25px 0 10px 0;
+    margin: 0 auto;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+}
+
+.form-row{
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-row span{
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+}
+
+.form-row input{
+    display: inline-block;
+    margin: 15px 12px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+#age, #adult ,#child{
+    width: 10%;
+}
+
+#location , #room, #check-in ,#check-out { 
+    width: 20%;
+    border-radius: 10px;
+}
+
+.sub-btn{
+    color: white;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background: black;
+    font-family: sans-serif;
+}
+.sub-btn:hover{
+    font-size: 18px;
+    background: whitesmoke;
+    color: black;
+}
+
+.banner > h2{
+    padding-bottom: 20px;
+    font-size: 34px;
+    color: white;
+}
+
+@media (max-width:1276px) {
+    .card-container{
+        grid-template-columns: 100%;
+    }    
+    .card-img{
+        height: 450px;
+    }
+    .card-content{
+        height: 750px;
+        background: black;
+    }
+    .form-row span{
+        color: white;
+    }
+    .card-content >h3, .booking{
+        color: white;
+    }
+    .banner{
+        height: 150vh;
+        background: none;
+        margin-top: 90px ;
+    }
+    .banner >h2{
+        color: black;
+    }
+    .sub-btn{
+        background: white;
+        color: black;
+    }
+}

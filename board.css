@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAV SECTION  */
+
+:root {
+  --background: rgb(0, 0, 0);
+}
+
+header {
+  background: var(--background);
+  height: 8vh;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  z-index: 455;
+  color: #fff;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: rgb(255, 255, 255);
+}
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+.nav-toggle {
+  display: none;
+}
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 760px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 1s / 4;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: white;
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  nav ul li a:nth-child(1) {
+    float: left;
+  }
+}
+
+/* NAV SECTION END */
+
+/* BOARD CSS START */
+
+.first-page {
+  width: 100%;
+  height: auto;
+  padding-top: 5%;
+}
+.flex-div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content-div {
+  width: 510px;
+  height: auto;
+}
+.content-div > p {
+  font-size: 4rem;
+  margin: 10px;
+  font-weight: 400;
+  font-style: italic;
+}
+.content-div > h4 {
+  text-align: right;
+  font-size: 1rem;
+  font-style: italic;
+  padding-right: 10px;
+}
+
+/* MEET OUR MEMBER */
+
+.members {
+  width: 100%;
+  height: auto;
+}
+.meet {
+  font-size: 4rem;
+  color: rgb(221, 213, 137);
+  text-align: center;
+  padding: 50px;
+}
+.maincontainer {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 25px;
+}
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: black;
+  background: url("img/business-image2.png") no-repeat;
+}
+
+.mem1 {
+  background: url("img/business-image3.png") no-repeat;
+}
+.mem2 {
+  background: url("img/business-image5.png");
+}
+.mem3 {
+  background: url("img/business-image4.png");
+}
+.mem4 {
+  background: url("img/business-image2.png");
+}
+.mem5 {
+  background: url("img/business-image6.png");
+}
+.mem6 {
+  background: url("img/business-image1.png");
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: black;
+  transform: rotateY(180deg);
+  font-size: 20px;
+  text-align: center;
+  padding-top: 160px;
+}
+
+.first-member-box,
+.second-member-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MANAGING PARTNER */
+
+.end-section {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -10px;
+}
+.end-section > h2 {
+  color: rgb(221, 213, 137);
+  text-align: center;
+  font-size: 4rem;
+}
+
+.slider {
+  width: 760px;
+  height: 100px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  position: relative;
+  margin-top: 110px;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+}
+
+.slider::before {
+  top: 0;
+  left: 0;
+}
+.slider::after {
+  top: 0;
+  left: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider .slider-track {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll 40s infinite linear;
+}
+
+.slider .slide img {
+  width: 250px;
+  height: 100px;
+}
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: black;
+ 
+}
+@media screen and (max-width: 560px) {
+  .slider {
+    width: 560px;
+  }
+  .slider .slide img {
+    height: 80px;
+  }
+  .content-div > p {
+    font-size: 2.5rem;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
